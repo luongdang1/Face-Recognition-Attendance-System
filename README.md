@@ -1,12 +1,10 @@
-AI-Powered Facial Recognition Attendance System
-📅 February 2025 – March 2025
-🔧 Technologies: Python, C/C++, MTCNN, MobileFaceNet, SQLite, Flask, Raspberry Pi 4
+# AI-Powered Facial Recognition Attendance System
 
-# 📌 Overview
+# Overview
 This is a lightweight and efficient AI-powered attendance system built to run on Raspberry Pi 4, combining real-time face detection, recognition, and local attendance logging with a user-friendly dashboard. The system is designed for offline use, low power, and limited-resource environments like classrooms or small office setups.
 
-# 🧠 Architecture
-  ## 1. Face Detection
+# Architecture
+## 1. Face Detection
 
 [1] ![image](https://github.com/user-attachments/assets/16b6fe2b-5b3c-4160-a135-c0583097e31b)
 
@@ -14,8 +12,8 @@ The MTCNN (Multi-task Cascaded Convolutional Neural Network) processes an input 
 
 ![image](https://github.com/user-attachments/assets/db179110-054c-4a73-99e4-71229899ac82)
 
-  ## 2. Face Recognition
-To utilize the pre-trained model, you can use [model_mobilefacenet.pth]
+## 2. Face Recognition
+To utilize the pre-trained model, you can use [model_mobilefacenet.pth](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/model_mobilefacenet.pth)
 
 [2] ![image](https://github.com/user-attachments/assets/e3b8ce42-8682-4d38-9456-01c46228275f)
 
@@ -29,31 +27,31 @@ Matches embeddings via cosine similarity with fusion techniques for robustness a
 To improve the accuracy of face recognition, the system uses ArcFace loss during the training of MobileFaceNet. ArcFace introduces an angular margin to the softmax loss, forcing embeddings of the same identity to cluster closely while separating different identities more distinctly on a hypersphere. This leads to highly discriminative and robust embeddings, making the system more reliable under variations in lighting, pose, and expression.
 
 
-  ## 3. Hardware Control (C/C++)
+## 3. Hardware Control (C/C++)
 Handles GPIO and camera module integration using C/C++ for low-level operations.
 
 # Quick start
-You can refer to [this notebook](https://github.com/luongdang1/ASR-in-Smart-Home/blob/main/asr_speech_recognition.ipynb) to easily learn how to use it
+You can refer to [this notebook](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/face_recognitionn.ipynb) to easily learn how to use it
 # References 
-"Some of the papers I referred to include:"
+[1] [Sheng Chen1,2, Yang Liu2, Xiang Gao2, and Zhen Han1 “ MobileFaceNets: “ Efficient 
+CNNs for Accurate Real- Time Face Verification on Mobile Devices”] (https://arxiv.org/pdf/1804.07573)
 
-Optimizing Speech Recognition for the Edge — [arXiv:1909.12408](https://arxiv.org/abs/1909.12408)
+[2] [Ziping Yu1 , Hongbo Huang∗2 , Weijun Chen3 , Yongxin Su4 , Yahui Liu5 , and 
+Xiuying Wang2 “YOLO-FaceV2: A Scale and Occlusion Aware Face Detector”](https://arxiv.org/pdf/2208.02019)
 
-Tiny Transducer: A Highly Efficient Speech Recognition Model for Edge Devices — [arXiv:2101.06856](https://arxiv.org/pdf/2101.06856)
+[3] [Luis Vilaca1,2, Paula Viana1,2, Pedro Calvaho1,2, and Maria Terasa Andrade1,3 
+“Improving Efficiency in Facial Recognition Tasks Through a Dataset Optimization 
+Approach “](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10452341)
 
-Conformer-Based Speech Recognition on Extreme Edge-Computing Devices — [arXiv:2312.10359](https://arxiv.org/pdf/2312.10359)
+[4] [Anjith George, Member, Christophe Ecabert, Member “EdgeFace: Efficient Face 
+Recognition Model for Edge Devices”](https://arxiv.org/pdf/2307.01838)
 
-https://nvidia.github.io/OpenSeq2Seq/html/speech-recognition/deepspeech2.html [1]
+[5] [Muhammad Zeeshan Khan, Saad Harous, Saleet Ul Hassan, Muhammad Usman 
+Ghani Khan, Razi Iqba “Deep Unified Model For Face Recognition Based on 
+Convolution Neural Network and Edge Computing”](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8721062)
 
-https://www.researchgate.net/figure/DeepSpeech-2-architecture41_fig23_348706070 [2]
-
-https://deepspeech.readthedocs.io/en/v0.6.1/DeepSpeech.html [3]
-
-https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10966154 [4]
-
-https://www.kaggle.com/datasets/tommyngx/fluent-speech-corpus [5]
-
-https://github.com/mozilla/DeepSpeech 
+[6] [Jiankang Deng, Jia Guo, Jing Yang, Niannan Xue, Irene Kotsia, and Stefanos 
+Zafeiriou “ArcFace: Additive Angular Margin Loss for Deep Face Recognition”](https://arxiv.org/pdf/1801.07698)
 # License
 The project is released under the MIT License.
 
