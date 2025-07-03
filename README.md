@@ -26,7 +26,8 @@ Matches embeddings via cosine similarity with fusion techniques for robustness a
 ![image](https://github.com/user-attachments/assets/f0154b83-5b87-4b33-8644-30e93d7b2ffd)
 
 To improve the accuracy of face recognition, the system uses ArcFace loss during the training of MobileFaceNet. ArcFace introduces an angular margin to the softmax loss, forcing embeddings of the same identity to cluster closely while separating different identities more distinctly on a hypersphere. This leads to highly discriminative and robust embeddings, making the system more reliable under variations in lighting, pose, and expression.
-Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb)
+
+Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb) - Author : DuyNguyễnDươngHoàng
 ## 3. Hardware Control (C/C++)
 Handles GPIO and camera module integration using C/C++ for low-level operations.
 
