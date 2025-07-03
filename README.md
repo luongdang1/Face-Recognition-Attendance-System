@@ -12,6 +12,7 @@ The MTCNN (Multi-task Cascaded Convolutional Neural Network) processes an input 
 
 ![image](https://github.com/user-attachments/assets/db179110-054c-4a73-99e4-71229899ac82)
 
+Dataset : [face-detection-dataset](https://www.kaggle.com/datasets/fareselmenshawii/face-detection-dataset) - Author : Fares Elmenshawii
 ## 2. Face Recognition
 To utilize the pre-trained model, you can use [model_mobilefacenet.pth](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/model_mobilefacenet.pth)
 
@@ -25,8 +26,7 @@ Matches embeddings via cosine similarity with fusion techniques for robustness a
 ![image](https://github.com/user-attachments/assets/f0154b83-5b87-4b33-8644-30e93d7b2ffd)
 
 To improve the accuracy of face recognition, the system uses ArcFace loss during the training of MobileFaceNet. ArcFace introduces an angular margin to the softmax loss, forcing embeddings of the same identity to cluster closely while separating different identities more distinctly on a hypersphere. This leads to highly discriminative and robust embeddings, making the system more reliable under variations in lighting, pose, and expression.
-
-
+Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb)
 ## 3. Hardware Control (C/C++)
 Handles GPIO and camera module integration using C/C++ for low-level operations.
 
