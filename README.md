@@ -41,88 +41,31 @@ Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb) - Author :
 - **Application 2 – Smart Door System:**  
   An automated door control system that uses facial recognition for access, detects unknown individuals, and sends alerts.
 
+The system combines a lightweight web backend with embedded hardware control:
+
+- **Web Layer:** Built with Flask, providing APIs and a dashboard interface using HTML, CSS, and JavaScript. Data is stored locally using SQLite for simplicity and fast access.
+
+- **AI Core:** YOLOv8 is used for real-time face detection, while MobileFaceNet generates compact face embeddings for recognition.
+
+- **Embedded Platform:** Deployed on Raspberry Pi 4, handling both inference and hardware interaction.
+
+- **Hardware Integration:** Includes PIR sensor for motion detection, relay for door control, and buzzer/LED for alerts and status indication.
 ---
 
-## 🔍 Technologies Used
+## ⚙️ Key Functionalities
 
-| Component | Technology |
-|----------|-----------|
-| Face Detection | YOLOv8 |
-| Face Recognition | MobileFaceNet |
-| Backend | Flask |
-| Database | SQLite |
-| Embedded Device | Raspberry Pi 4 |
-| Frontend | HTML, CSS, JavaScript |
-| Hardware | PIR sensor, Relay, Buzzer, LED, Magnetic lock |
+### 🌐 Web Dashboard
+- User authentication for lecturers  
+- Manage classes and student data  
+- Real-time face-based attendance tracking  
+- Store and visualize attendance records  
 
----
-
-## ⚙️ Features
-
-### 📌 Web Attendance System
-- Lecturer registration and login  
-- Class and student management  
-- Automatic attendance using facial recognition  
-- Face data update and management  
-- Attendance history storage and statistics  
-- Dashboard displaying attendance rates and recognition results  
-
-### 🔐 Smart Door System
-- Motion detection using PIR sensor  
-- Face recognition before granting access  
-- Automatic door unlocking via relay for authorized users  
-- Sound (buzzer) and LED alerts for unknown individuals  
-- Email notifications for unauthorized access attempts  
-
----
-
-## 🖼️ Login Interface
-
-![Login Interface](login.png)
-
----
-
-## 🛠️ Installation Guide
-
-### Requirements
-- Raspberry Pi 4 (4GB or 8GB RAM)  
-- USB/CSI Camera  
-- Python 3.7+  
-
-### Install dependencies
-```bash
-pip install -r requirements.txt
-Run the application
-python run.py
-Access via local network: http://<rasp_ip>:5000
-Register or log in as a lecturer to access the dashboard
-🔌 Hardware Configuration
-GPIO	Device
-GPIO 24	PIR Sensor
-GPIO 23	Buzzer
-GPIO 22	White LED
-GPIO 27	Red LED
-GPIO 17	Relay (magnetic lock control)
-🧪 Model Evaluation
-YOLOv8 Accuracy: >87% in real-world conditions
-Embedding Extraction Speed: ~10–15 FPS on Raspberry Pi 4
-Recognition Database: 128-dimensional embeddings using MobileFaceNet + ArcFace Loss
-🧱 Project Structure
-FaceRecognition-Web-Door/
-│
-├── app1/                # Flask web app - attendance system
-├── static/              # CSS, JS files
-├── templates/           # HTML templates
-├── face_recognition_with_feedback.py  # Hardware control + face recognition
-├── run.py               # Main Flask application
-├── requirements.txt     # Dependencies
-└── ...
-📈 Future Improvements
-Add mask detection and anti-spoofing (fake face detection)
-Optimize performance using GPU or migrate to Jetson Nano
-Integrate automatic class schedule synchronization
-Add behavior analysis for unknown individuals
-
+### 🚪 Smart Access Control
+- Triggered by motion (PIR sensor)  
+- Face verification before unlocking  
+- Relay-based door control for authorized users  
+- Alert system (LED + buzzer) for unknown faces  
+- Email notification for suspicious access  
 # Quick start
 You can refer to [this notebook](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/face_recognitionn.ipynb) to easily learn how to use it
 # References 
