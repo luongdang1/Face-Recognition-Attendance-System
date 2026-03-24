@@ -75,10 +75,11 @@ You can refer to [this notebook](https://github.com/luongdang1/Face-Recognition-
 ### Install dependencies
 ```bash
 pip install -r requirements.txt
-###
-Run the application
+```
+### Run the application
 ```bash 
 python run.py
+```
 Access via local network: http://<rasp_ip>:5000
 Register or log in as a lecturer to access the dashboard
 # References 
