@@ -29,10 +29,7 @@ To improve the accuracy of face recognition, the system uses ArcFace loss during
 
 Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb) - Author : DuyNguyễnDươngHoàng
 ## 3. Web dashboard and hardware control
-# FaceRecognition-Web-Door
-
-## 3. Web Dashboard and Hardware Control
-
+![Login Interface](login.png)
 **FaceRecognition-Web-Door** is a deep learning–based facial recognition system deployed on an embedded platform using **Raspberry Pi 4**. The project integrates two main applications:
 
 - **Application 1 – Web-based Attendance System:**  
