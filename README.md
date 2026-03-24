@@ -29,47 +29,73 @@ To improve the accuracy of face recognition, the system uses ArcFace loss during
 
 Dataset : [VN-celeb](https://www.kaggle.com/datasets/duypok/vn-celeb) - Author : DuyNguyễnDươngHoàng
 ## 3. Web dashboard and hardware control
-FaceRecognition-Web-Door is a deep learning–based facial recognition system deployed on an embedded platform using Raspberry Pi 4. The project integrates two main applications:
+# FaceRecognition-Web-Door
 
-Application 1 – Web-based Attendance System: A Flask web interface that allows lecturers to manage and track student attendance using facial recognition.
-Application 2 – Smart Door System: An automated door control system that uses facial recognition for access, detects unknown individuals, and sends alerts.
-🔍 Technologies Used
-Component	Technology
-Face Detection	YOLOv8
-Face Recognition	MobileFaceNet
-Backend	Flask
-Database	SQLite
-Embedded Device	Raspberry Pi 4
-Frontend	HTML, CSS, JavaScript
-Hardware	PIR sensor, Relay, Buzzer, LED, Magnetic lock
-⚙️ Features
-📌 Web Attendance System
-Lecturer registration and login.
-Class and student management.
-Automatic attendance using facial recognition.
-Face data update and management.
-Attendance history storage and statistics.
-Dashboard displaying attendance rates and recognition results.
-🔐 Smart Door System
-Motion detection using PIR sensor.
-Face recognition before granting access.
-Automatic door unlocking via relay for authorized users.
-Sound (buzzer) and LED alerts for unknown individuals.
-Email notifications for unauthorized access attempts.
-🖼️ Login Interface
+## 3. Web Dashboard and Hardware Control
+
+**FaceRecognition-Web-Door** is a deep learning–based facial recognition system deployed on an embedded platform using **Raspberry Pi 4**. The project integrates two main applications:
+
+- **Application 1 – Web-based Attendance System:**  
+  A Flask web interface that allows lecturers to manage and track student attendance using facial recognition.
+
+- **Application 2 – Smart Door System:**  
+  An automated door control system that uses facial recognition for access, detects unknown individuals, and sends alerts.
+
+---
+
+## 🔍 Technologies Used
+
+| Component | Technology |
+|----------|-----------|
+| Face Detection | YOLOv8 |
+| Face Recognition | MobileFaceNet |
+| Backend | Flask |
+| Database | SQLite |
+| Embedded Device | Raspberry Pi 4 |
+| Frontend | HTML, CSS, JavaScript |
+| Hardware | PIR sensor, Relay, Buzzer, LED, Magnetic lock |
+
+---
+
+## ⚙️ Features
+
+### 📌 Web Attendance System
+- Lecturer registration and login  
+- Class and student management  
+- Automatic attendance using facial recognition  
+- Face data update and management  
+- Attendance history storage and statistics  
+- Dashboard displaying attendance rates and recognition results  
+
+### 🔐 Smart Door System
+- Motion detection using PIR sensor  
+- Face recognition before granting access  
+- Automatic door unlocking via relay for authorized users  
+- Sound (buzzer) and LED alerts for unknown individuals  
+- Email notifications for unauthorized access attempts  
+
+---
+
+## 🖼️ Login Interface
+
 ![Login Interface](login.png)
-🛠️ Installation Guide
-Requirements:
-Raspberry Pi 4 (4GB or 8GB RAM)
-USB/CSI Camera
-Python 3.7+
-Required Python libraries:
+
+---
+
+## 🛠️ Installation Guide
+
+### Requirements
+- Raspberry Pi 4 (4GB or 8GB RAM)  
+- USB/CSI Camera  
+- Python 3.7+  
+
+### Install dependencies
+```bash
 pip install -r requirements.txt
-Run the Application:
-# Start Flask web app
+Run the application
 python run.py
 Access via local network: http://<rasp_ip>:5000
-Register or log in as a lecturer to access the dashboard.
+Register or log in as a lecturer to access the dashboard
 🔌 Hardware Configuration
 GPIO	Device
 GPIO 24	PIR Sensor
@@ -92,10 +118,10 @@ FaceRecognition-Web-Door/
 ├── requirements.txt     # Dependencies
 └── ...
 📈 Future Improvements
-Add mask detection and anti-spoofing (fake face detection).
-Optimize performance using GPU or migrate to Jetson Nano.
-Integrate automatic class schedule synchronization.
-Add behavior analysis for unknown individuals.
+Add mask detection and anti-spoofing (fake face detection)
+Optimize performance using GPU or migrate to Jetson Nano
+Integrate automatic class schedule synchronization
+Add behavior analysis for unknown individuals
 
 # Quick start
 You can refer to [this notebook](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/face_recognitionn.ipynb) to easily learn how to use it
