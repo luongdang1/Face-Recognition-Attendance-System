@@ -65,6 +65,22 @@ The system combines a lightweight web backend with embedded hardware control:
 - Email notification for suspicious access  
 # Quick start
 You can refer to [this notebook](https://github.com/luongdang1/Face-Recognition-Attendance-System/blob/main/face_recognitionn.ipynb) to easily learn how to use it
+## 🛠️ Installation Guide
+
+### Requirements
+- Raspberry Pi 4 (4GB or 8GB RAM)  
+- USB/CSI Camera  
+- Python 3.7+  
+
+### Install dependencies
+```bash
+pip install -r requirements.txt
+###
+Run the application
+```bash 
+python run.py
+Access via local network: http://<rasp_ip>:5000
+Register or log in as a lecturer to access the dashboard
 # References 
 [1] [Sheng Chen1,2, Yang Liu2, Xiang Gao2, and Zhen Han1 “ MobileFaceNets: “ Efficient 
 CNNs for Accurate Real- Time Face Verification on Mobile Devices”](https://arxiv.org/pdf/1804.07573)
